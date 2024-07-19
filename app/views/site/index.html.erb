@@ -1,28 +1,3 @@
-<!doctype html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <title>BLOG  | Amaze UI Examples</title>
-  <meta name="renderer" content="webkit">
-  <meta http-equiv="Cache-Control" content="no-siteapp"/>
-  <link rel="icon" type="image/png" href="assets/i/favicon.png">
-  <meta name="mobile-web-app-capable" content="yes">
-  <link rel="icon" sizes="192x192" href="assets/i/app-icon72x72@2x.png">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
-  <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
-  <meta name="msapplication-TileImage" content="assets/i/app-icon72x72@2x.png">
-  <meta name="msapplication-TileColor" content="#0e90d2">
-  <link rel="stylesheet" href="assets/css/amazeui.min.css">
-  <link rel="stylesheet" href="assets/css/app.css">
-</head>
-
-<body id="blog">
 <!-- header start -->
 <header class="am-g am-g-fixed blog-fixed blog-text-center blog-header">
     <div id="banner" class="am-u-sm-8 am-u-sm-centered">
@@ -32,89 +7,27 @@
 </header>
 <!-- header end -->
 <!-- topbar start -->
-<hr>
-<nav class="am-g am-g-fixed blog-fixed blog-nav">
-<button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only blog-button" data-am-collapse="{target: '#blog-collapse'}" ><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
-
-  <div class="am-collapse am-topbar-collapse" id="blog-collapse">
-    <ul class="am-nav am-nav-pills am-topbar-nav">
-      <li class="am-active"><a href="lw-index.html">首页</a></li>
-      <li><a href="lw-article.html">文章</a></li>
-      <li><a href="lw-timeline.html">时间线</a></li>
-    </ul>
-  </div>
-</nav>
-<hr>
+<%= render "layouts/topbar" %>
 <!-- topbar end -->
 <!-- content start -->
 <div class="am-g am-g-fixed blog-fixed">
     <div class="am-u-md-8 am-u-sm-12">
         <!-- article start -->
-        <article class="am-g blog-entry-article">
-            <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-img">
-                <img src="assets/i/f10.jpg" alt="" class="am-u-sm-12">
-            </div>
-            <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-text">
-                <span><a href="" class="blog-color">article &nbsp;</a></span>
-                <span> @amazeUI &nbsp;</span>
-                <span>2015/10/9</span>
-                <h1><a href="">总在思考一句积极的话</a></h1>
-                <p>那时候刚好下着雨，柏油路面湿冷冷的，还闪烁着青、黄、红颜色的灯火。
-                </p>
-                <p><a href="" class="blog-continue">continue reading</a></p>
-            </div>
-        </article>
+        <%= render "layouts/article" %>
         <!-- article end -->
-        <article class="am-g blog-entry-article">
-            <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-img">
-                <img src="assets/i/f10.jpg" alt="" class="am-u-sm-12">
-            </div>
-            <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-text">
-                <span><a href="" class="blog-color">article &nbsp;</a></span>
-                <span> @amazeUI &nbsp;</span>
-                <span>2015/10/9</span>
-                <h1><a href="">总在思考一句积极的话</a></h1>
-                <p>那时候刚好下着雨，柏油路面湿冷冷的，还闪烁着青、黄、红颜色的灯火。
-                </p>
-                <p><a href="" class="blog-continue">continue reading</a></p>
-            </div>
-        </article>
         <!-- pagination start -->
-        <ul class="am-pagination">
+        <!-- <ul class="am-pagination">
             <li class="am-pagination-prev"><a href="">&laquo; Prev</a></li>
             <li class="am-pagination-next"><a href="">Next &raquo;</a></li>
-        </ul>
+        </ul> -->
         <!-- pagination end -->
     </div>
-    <!-- 侧边栏 start -->
-    <div class="am-u-md-4 am-u-sm-12 blog-sidebar">
-        <div class="blog-sidebar-widget blog-bor">
-            <h2 class="blog-text-center blog-title"><span>About ME</span></h2>
-            <img src="assets/i/avatar.jpg" alt="about me" class="blog-entry-img" >
-            <p>渣布</p>
-            <p>
-        我是渣布。死宅程序员。
-        </p><p>路一直在走，但是渐渐发现身边的人都离我越来越远，有些是停下脚步，有些则被我抛弃掉。一个人的路，并不可怖，而更多的是无奈。</p>
-        </div>
-        <div class="blog-sidebar-widget blog-bor">
-            <h2 class="blog-title"><span>人生风向标</span></h2>
-            <ul class="am-list">
-            	<li><a href="#">千秋邈矣独留我,百战归来再读书</a></li>
-                <li><a href="#">道德构建的是理想社会，而经济学构建的是现实社会</a></li>
-                <li><a href="#">天行健，君子以自强不息。地势坤，君子以厚德载物</a></li>
-                <li><a href="#">天地不仁，以万物为刍狗。圣人不仁，以百姓为刍狗</a></li>
-            </ul>
-        </div>
-    </div>
+    <!-- sidebar start -->
+    <%= render "layouts/sidebar" %>
+    <!-- sidebar end -->
 </div>
-<!-- 侧边栏 start -->
 <!-- content end -->
 <!-- footer start -->
-<footer class="blog-footer">
-    <div class="blog-text-center">Made By Abu</div>    
-</footer>
+<%= render "layouts/footer" %>
 <!-- footer end -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/amazeui.min.js"></script>
-</body>
-</html>
+

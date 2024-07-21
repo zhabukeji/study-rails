@@ -5,3 +5,4 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+Topbar.create([{ name: "主页" , address: "site"}, { name: "文章" , address: "#"} ,{ name: "时间线" , address: "#"}])

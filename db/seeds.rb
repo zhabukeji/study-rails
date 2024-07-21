@@ -5,4 +5,6 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-Topbar.create([{ name: "主页" , address: "site"}, { name: "文章" , address: "#"} ,{ name: "时间线" , address: "#"}])
+#   Topbar.create([{ name: "主页" , address: "site"}, { name: "文章" , address: "#"} ,{ name: "时间线" , address: "#"}])
+
+Article.create( title: "总在思考一句积极的话" , author: "amazeUI" , context: "那时候刚好下着雨，柏油路面湿冷冷的，还闪烁着青、黄、红颜色的灯火。" ,thumbnail: "/assets/i/f10.jpg")

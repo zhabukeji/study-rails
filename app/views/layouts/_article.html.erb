@@ -5,7 +5,8 @@
     <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-text">
         <span>article &nbsp;</span>
         <span> @<%= article.author %> &nbsp;</span>
-        <span><%= article.created_at.strftime("%Y-%m-%d") %></span>
+        <% # time_ago_in_words 距离当前时间的间隔 %>
+        <span><%= time_ago_in_words article.created_at %></span>
         <h1><a href="#"><%= article.title %></a></h1>
         <p><%= article.context %>
         </p>

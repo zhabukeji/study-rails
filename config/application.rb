@@ -21,5 +21,6 @@ module Blog
     # 数据库存储的时间戳设为本地
     config.active_record.default_timezone = :local
     # config.eager_load_paths << Rails.root.join("extras")
+    config.i18n.default_locale = :"zh-CN"
   end
 end

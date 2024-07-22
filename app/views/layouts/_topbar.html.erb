@@ -6,8 +6,9 @@
         <%
             topbars = Topbar.all
             topbars.each do |topbar| 
+                topbar.address? or next
         %> 
-        <li class="am <%= topbar.address? and current_page?(controller: topbar.address) ? 'am-active' : '' %>"><a href="<%= topbar.address %>"><%= topbar.name %></a></li>
+        <li class="am <%= topbar.address? and current_page?(controller: topbar.address) ? 'am-active' : '' %>"><%= link_to topbar.name , controller: topbar.address %> </li>
         <% end %> 
     </ul>
 </div>

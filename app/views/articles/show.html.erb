@@ -1,7 +1,7 @@
 <!-- header start -->
 <header class="am-g am-g-fixed blog-fixed blog-text-center blog-header">
     <div id="banner" class="am-u-sm-8 am-u-sm-centered">
-        <img src="assets/i/logo.png" alt="玩趣 Logo"/>
+        <img src="/assets/i/logo.png" alt="玩趣 Logo"/>
         <h2 class="am-hide-sm-only"></h2>
     </div>
 </header>
@@ -11,19 +11,19 @@
 <!-- topbar end -->
 <!-- content start -->
 <div class="am-g am-g-fixed blog-fixed">
-    <div class="am-u-md-8 am-u-sm-12">
+    <div class="am-u-md-10 am-u-sm-12">
         <!-- article start -->
         <article class="am-article blog-article-p">
             <div class="am-article-hd">
-                <h1 class="am-article-title blog-text-center">成长</h1>
+                <h1 class="am-article-title blog-text-center"><%= @article.title %></h1>
                 <p class="am-article-meta blog-text-center">
-                    <span><a href="#" class="blog-color">人生 &nbsp;</a></span>-
-                    <span><a href="#">@渣布 &nbsp;</a></span>-
-                    <span><a href="#">2018/04/17</a></span>
+                    <span>人生 &nbsp;</span>-
+                    <span>@<%= @article.author %> &nbsp;</span>-
+                    <span><%= time_ago_in_words @article.created_at %></span>
                 </p>
             </div>        
             <div class="am-article-bd">
-                <img src="assets/i/f17.jpg" alt="" class="blog-entry-img blog-article-margin"> 
+                <img src="/assets/i/f17.jpg" alt="" class="blog-entry-img blog-article-margin"> 
                 <p>1. 方法论<br>
                     这件事情是我近期【12月】发现的。就简单说说对同一件事情的看法，时间正好两年。初入职场，很讨厌方法论，觉得工作上的事情应按照自己习惯进行，嘛，随着事情的累积，有些东西，并不是想当然。你要知道，这些东西就是工作中开发出来的经验论，而采用这套理论的方法论的人，无论从哪方面都是高于你这个初生牛犊的社会人士，我凭啥什么都不验证过就去质疑他们呢，事实证明，确实，我啥也凭不上，没有资格。面对方法论，更应该以一个全面的姿态去考量他，有些方法确实可行好用，亦或许随着时间累积选择更好的方法。方法本身无对错，就好比编程语言，本身就是一种工具，而工具的存在就是去解决问题，而不是去考虑孰好孰坏，毕竟扳手和锤子应用场景相同，也有不同，身为一个汽车修理工，同时拥有两者很符合逻辑。那么拥有这两样工具的人，下面应该考虑如何赢得球赛了。<br></p>
                     <p>2. 生活态度<br>
@@ -44,10 +44,12 @@
         <!-- pagination end -->
     </div>
     <!-- sidebar start -->
-    <%= render "layouts/sidebar" %>
     <!-- sidebar end -->
 </div>
 <!-- content end -->
 <!-- footer start -->
 <%= render "layouts/footer" %>
 <!-- footer end -->
+
+
+

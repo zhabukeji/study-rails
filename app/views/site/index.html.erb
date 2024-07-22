@@ -1,7 +1,7 @@
 <!-- header start -->
 <header class="am-g am-g-fixed blog-fixed blog-text-center blog-header">
     <div id="banner" class="am-u-sm-8 am-u-sm-centered">
-        <img src="assets/i/logo.png" alt="玩趣 Logo"/>
+        <img src="/assets/i/logo.png" alt="玩趣 Logo"/>
         <h2 class="am-hide-sm-only"></h2>
     </div>
 </header>
@@ -13,8 +13,8 @@
 <div class="am-g am-g-fixed blog-fixed">
     <div class="am-u-md-8 am-u-sm-12">
         <!-- article start -->
-        <% articles = Article.all %>
-        <%= render partial: "layouts/article", collection: articles %>
+        <% @articles = Article.all %>
+        <%= render partial: "layouts/article", collection: @articles %>
         <!-- article end -->
         <!-- pagination start -->
         <!-- <ul class="am-pagination">

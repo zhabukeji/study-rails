@@ -8,7 +8,7 @@
 <div class="am-g am-g-fixed blog-fixed">
     <div class="am-u-md-8 am-u-sm-12">
         <!-- article start -->
-        <% @articles = Article.all %>
+        <% @articles = Article::index_list %>
         <%= render partial: "layouts/article", collection: @articles %>
         <!-- article end -->
         <!-- pagination start -->

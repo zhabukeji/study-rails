@@ -4,7 +4,7 @@
 <div class="am-collapse am-topbar-collapse" id="blog-collapse">
     <ul class="am-nav am-nav-pills am-topbar-nav">
         <%
-            topbars = Topbar.all
+            topbars = Topbar.index_list
             topbars.each do |topbar| 
                 topbar.address? or next
         %> 

@@ -6,8 +6,8 @@
     <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-text">
         <span>article &nbsp;</span>
         <span> @<%= article.author %> &nbsp;</span>
-        <% # time_ago_in_words 距离当前时间的间隔 %>
-        <span><%= time_ago_in_words article.created_at %></span>
+        <% # time_ago_in_words 距离当前时间的间隔 对大于1天 显示 Y-m-d 小于一分钟则使用 time_ago_in_word 这个方法后续会写到concern里 %>
+        <span><%= Time.now - article.created_at < 1.days ? time_ago_in_words(article.created_at) : article.created_at.strftime("%Y-%m-%d") %></span>
         <h1><%= article.title %></h1>
         <p><%= article.context %>
         </p>

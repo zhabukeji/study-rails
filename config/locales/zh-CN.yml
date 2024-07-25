@@ -75,9 +75,9 @@ zh-CN:
       less_than_x_seconds: "%{count}秒前"
       less_than_x_minutes: "%{count}分钟前"
       over_x_years: "%{count}年多"
-      x_seconds: "%{count}秒"
-      x_minutes: "%{count}分钟"
-      x_days: "%{count}天前"
+      x_seconds: "%{count}秒前"
+      x_minutes: "%{count}分钟前"
+      x_days: "%{year}天前"
       x_months: "%{count}个月前"
       x_years: "%{count}年前"
     prompts:

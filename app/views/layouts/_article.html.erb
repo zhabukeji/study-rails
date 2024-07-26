@@ -7,7 +7,7 @@
         <span>article &nbsp;</span>
         <span> @<%= article.author %> &nbsp;</span>
         <% # time_ago_in_words 距离当前时间的间隔 对大于1天 显示 Y-m-d 小于一分钟则使用 time_ago_in_word 这个方法后续会写到concern里 %>
-        <span><%= time_show(article.created_at,method(:time_ago_in_words)) %></span>
+        <span><%= time_show(article.created_at) %></span>
         <h1><%= article.title %></h1>
         <p><%= article.context %>
         </p>

@@ -36,16 +36,8 @@
 <!-- footer start -->
 <!-- footer end -->
 <script type="module">
-  import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js";
-  var article_context = `# 全局错误码示范
-
-## 全局错误码
-
-| 错误码 | 错误解释 |
-| --- | --- |
-| 1001 | 接口认证失败 |
-| 1002 | 授权过期 |
-| 1003 | 缺失参数全局错误码 |`;
+  import { marked } from "/assets/js/marked.esm.js";
+  var article_context = `<%= @article.context %>`;
   document.getElementById('article-context').innerHTML = marked.parse(article_context);
 
 </script>

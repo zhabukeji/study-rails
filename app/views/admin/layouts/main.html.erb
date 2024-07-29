@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Amaze UI Admin index Examples</title>
+    <meta name="description" content="这是一个 index 页面">
+    <meta name="keywords" content="index">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="icon" type="image/png" href="/assets/i/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="/assets/i/app-icon72x72@2x.png">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+    <%= stylesheet_link_tag "/assets/css/amazeui.min.css", "/assets/css/amazeui.datatables.min.css", "/assets/css/admin-app.css" %>
+    <%= javascript_include_tag "/assets/js/jquery.min.js", "/assets/js/echarts.min.js" %>
+</head>
+<body data-type="index">
+<%= javascript_include_tag "/assets/js/theme.js" %>
+<div class="am-g tpl-g">
+    <%= render 'admin/layouts/header' %>
+    <%= render 'admin/layouts/theme' %>
+    <%= render 'admin/layouts/left-sidebar' %>
+
+<%= yield %>
+
+</div>
+<%= javascript_include_tag "/assets/js/amazeui.min.js", "/assets/js/amazeui.datatables.min.js", "/assets/js/dataTables.responsive.min.js", "/assets/js/admin-app.js" %>
+</body>
+</html>

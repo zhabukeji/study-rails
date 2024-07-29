@@ -1,5 +1,5 @@
 class Admin::SiteController < ApplicationController
+    layout "admin/layouts/main"
     def index
-        render layout: false
     end
 end

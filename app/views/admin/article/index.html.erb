@@ -77,16 +77,28 @@
                             </table>
                         </div>
                         <div class="am-u-lg-12 am-cf">
-                            
                             <div class="am-fr">
                                 <ul class="am-pagination tpl-pagination">
-                                    <li class="am-disabled"><a href="#">«</a></li>
-                                    <li class="am-active"><a href="#">1</a></li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                    <li><a href="#">4</a></li>
-                                    <li><a href="#">5</a></li>
-                                    <li><a href="#">»</a></li>
+                                    <% page = (params[:page] || 1).to_i 
+                                        max_page = Article.count(:id)/Article::per_page
+                                        index_page = max_page > (page + 2) ? (page + 2) : max_page
+                                    %>
+                                    <li class="<%= (page == 1) ? 'am-disabled' : '' %>"><%= link_to "«" , admin_article_path(page: (page.to_i - 1))  %></li>
+                                    <% 
+                                    case page
+                                    when 1,2
+                                        (1..index_page).each do |i| 
+                                    %>
+                                    <li class="<%= (page == i) ? 'am-active' : '' %>"><%= link_to i , admin_article_path(page: i)  %></li>
+                                    <%  end
+                                    else
+                                        (page-2..index_page).each do |i| %>
+                                    <li class="<%= (page == i) ? 'am-active' : '' %>"><%= link_to i , admin_article_path(page: i)  %></li>    
+                                    <%  end
+                                    end
+                                    %>
+                                    <li class="<%= (page == max_page) ? 'am-disabled' : '' %>"><%= link_to "»" , admin_article_path(page: (page.to_i + 1))  %></li>
+                                    
                                 </ul>
                             </div>
                         </div>

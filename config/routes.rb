@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
-  resources :articles
+  resources :articles , only: [:show , :index]
   root 'site#index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
   namespace :admin do
+    root 'site#index'
     resources :articles
-    get '/' , to: 'site#index'
   end
 end

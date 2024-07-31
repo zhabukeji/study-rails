@@ -1,0 +1,45 @@
+<div class="tpl-content-wrapper">
+    <div class="row-content am-cf">
+        <div class="row">
+            <div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
+                <div class="widget am-cf">
+                    <div class="widget-head am-cf">
+                        <div class="widget-title am-fl"><%= current_page?(new_admin_article_path) ? '创建文章' : '编辑文章' %></div>
+                    </div>
+                    <div class="widget-body am-fr">
+                        
+                        <form class="am-form tpl-form-line-form">
+                            <div class="am-form-group">
+                                <label for="user-name" class="am-u-sm-3 am-form-label">标题 <span class="tpl-form-line-small-title">Title</span></label>
+                                <div class="am-u-sm-9">
+                                    <input type="text" class="tpl-form-input" id="user-name" placeholder="请输入标题文字" value="<%= @article.title %>">
+                                    <small>请填写标题文字10-20字左右。</small>
+                                </div>
+                            </div>
+                            <div class="am-form-group">
+                                <label for="user-name" class="am-u-sm-3 am-form-label">作者 <span class="tpl-form-line-small-title">Title</span></label>
+                                <div class="am-u-sm-9">
+                                    <input type="text" class="tpl-form-input" id="user-name" placeholder="请输入作者名字" value="<%= @article.author %>">
+                                    <small>请填写作者姓名</small>
+                                </div>
+                            </div>                             
+                            <div class="am-form-group">
+                                <label for="user-intro" class="am-u-sm-3 am-form-label">文章内容</label>
+                                <div class="am-u-sm-9">
+                                    <textarea class="" rows="10" id="user-intro" placeholder="请输入文章内容"><%= @article.context %></textarea>
+                                </div>
+                            </div>
+                            
+                            <div class="am-form-group">
+                                <div class="am-u-sm-9 am-u-sm-push-3">
+                                    <button type="button" class="am-btn am-btn-primary tpl-btn-bg-color-success ">提交</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        

@@ -14,10 +14,9 @@
                             <div class="am-form-group">
                                 <div class="am-btn-toolbar">
                                     <div class="am-btn-group am-btn-group-xs">
+                                        <%= link_to new_admin_article_path do  %>
                                         <button type="button" class="am-btn am-btn-default am-btn-success"><span class="am-icon-plus"></span> 新增</button>
-                                        <button type="button" class="am-btn am-btn-default am-btn-secondary"><span class="am-icon-save"></span> 保存</button>
-                                        <button type="button" class="am-btn am-btn-default am-btn-warning"><span class="am-icon-archive"></span> 审核</button>
-                                        <button type="button" class="am-btn am-btn-default am-btn-danger"><span class="am-icon-trash-o"></span> 删除</button>
+                                        <% end %>
                                     </div>
                                 </div>
                             </div>
@@ -26,12 +25,8 @@
                             <div class="am-form-group tpl-table-list-select">
                                 <select data-am-selected="{btnSize: 'sm'}">
                                     <option value="option1">所有类别</option>
-                                    <option value="option2">IT业界</option>
-                                    <option value="option3">数码产品</option>
-                                    <option value="option3">笔记本电脑</option>
-                                    <option value="option3">平板电脑</option>
-                                    <option value="option3">只能手机</option>
-                                    <option value="option3">超极本</option>
+                                    <option value="option2">#</option>
+                                    <option value="option3">#</option>
                                 </select>
                             </div>
                         </div>
@@ -62,12 +57,12 @@
                                         <td><%= article.updated_at.strftime("%Y-%m-%d %H:%M:%S") %></td>
                                         <td>
                                             <div class="tpl-table-black-operation">
-                                                <%= link_to edit_admin_article_path(article.id) do %> 
+                                                <%= link_to edit_admin_article_path(article) do %> 
                                                     <i class="am-icon-pencil"></i> 编辑
                                                 <% end %>
-                                                <a href="javascript:;" class="tpl-table-black-operation-del">
+                                                <%= link_to admin_article_path(article) , class: "tpl-table-black-operation-del" do %>
                                                     <i class="am-icon-trash"></i> 删除
-                                                </a>
+                                                <% end %>
                                             </div>
                                         </td>
                                     </tr>
@@ -81,24 +76,25 @@
                             <div class="am-fr">
                                 <ul class="am-pagination tpl-pagination">
                                     <% page = (params[:page] || 1).to_i 
-                                        max_page = Article.count(:id)/Article::per_page
+                                        max_page = (Article.count(:id)/Article::per_page) + 1
+                                        puts max_page
                                         index_page = max_page > (page + 2) ? (page + 2) : max_page
                                     %>
-                                    <li class="<%= (page == 1) ? 'am-disabled' : '' %>"><%= link_to "«" , admin_article_path(page: (page.to_i - 1))  %></li>
+                                    <li class="<%= (page == 1) ? 'am-disabled' : '' %>"><%= link_to "«" , admin_articles_path(page.to_i - 1)  %></li>
                                     <% 
                                     case page
                                     when 1,2
                                         (1..index_page).each do |i| 
                                     %>
-                                    <li class="<%= (page == i) ? 'am-active' : '' %>"><%= link_to i , admin_article_path(page: i)  %></li>
+                                    <li class="<%= (page == i) ? 'am-active' : '' %>"><%= link_to i , admin_articles_path(i)  %></li>
                                     <%  end
                                     else
                                         (page-2..index_page).each do |i| %>
-                                    <li class="<%= (page == i) ? 'am-active' : '' %>"><%= link_to i , admin_article_path(page: i)  %></li>    
+                                    <li class="<%= (page == i) ? 'am-active' : '' %>"><%= link_to i , admin_articles_path(i)  %></li>    
                                     <%  end
                                     end
                                     %>
-                                    <li class="<%= (page == max_page) ? 'am-disabled' : '' %>"><%= link_to "»" , admin_article_path(page: (page.to_i + 1))  %></li>
+                                    <li class="<%= (page == max_page) ? 'am-disabled' : '' %>"><%= link_to "»" , admin_articles_path(page.to_i + 1)  %></li>
                                     
                                 </ul>
                             </div>

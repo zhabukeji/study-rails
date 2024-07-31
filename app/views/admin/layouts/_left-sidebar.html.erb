@@ -16,12 +16,12 @@
     <!-- 菜单 -->
     <ul class="sidebar-nav">
         <li class="sidebar-nav-link">
-            <%= link_to "/admin" , class: (current_page?("/admin") ? 'active' : '') do %>
+            <%= link_to admin_path , class: (current_page?(admin_path) ? 'active' : '') do %>
                 <i class="am-icon-home sidebar-nav-link-logo"></i> 首页
             <% end %>
         </li>
         <li class="sidebar-nav-link">
-            <%= link_to "/admin/article",class: (current_page?("/admin/article") ? 'active' : '') do %>
+            <%= link_to admin_articles_path , class: (current_page?(admin_articles_path) ? 'active' : '') do %>
                 <i class="am-icon-table sidebar-nav-link-logo"></i> 文章列表
             <% end %>
         </li>

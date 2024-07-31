@@ -62,9 +62,9 @@
                                         <td><%= article.updated_at.strftime("%Y-%m-%d %H:%M:%S") %></td>
                                         <td>
                                             <div class="tpl-table-black-operation">
-                                                <a href="javascript:;">
+                                                <%= link_to edit_admin_article_path(article.id) do %> 
                                                     <i class="am-icon-pencil"></i> 编辑
-                                                </a>
+                                                <% end %>
                                                 <a href="javascript:;" class="tpl-table-black-operation-del">
                                                     <i class="am-icon-trash"></i> 删除
                                                 </a>
@@ -77,6 +77,7 @@
                             </table>
                         </div>
                         <div class="am-u-lg-12 am-cf">
+                            
                             <div class="am-fr">
                                 <ul class="am-pagination tpl-pagination">
                                     <% page = (params[:page] || 1).to_i 

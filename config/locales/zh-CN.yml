@@ -6,6 +6,8 @@ zh-CN:
     attributes:
       article:
         title: "标题"
+        author: "作者"
+        context: "内容"
     errors:
       messages:
         record_invalid: 验证失败：%{errors}

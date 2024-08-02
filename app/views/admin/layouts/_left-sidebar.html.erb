@@ -21,7 +21,7 @@
             <% end %>
         </li>
         <li class="sidebar-nav-link">
-            <%= link_to admin_articles_path , class: (current_page?(admin_articles_path) ? 'active' : '') do %>
+            <%= link_to admin_articles_path , class: (current_page?("/admin/articles") ? 'active' : '') do %>
                 <i class="am-icon-table sidebar-nav-link-logo"></i> 文章列表
             <% end %>
         </li>

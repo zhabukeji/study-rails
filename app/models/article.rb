@@ -5,7 +5,7 @@ class Article < ApplicationRecord
     self.per_page = 10
 
     def self.index_list
-        Article.select(:id, :title, :author, :thumbnail, :context, :created_at, :status).order(created_at: :desc).take(3)
+        Article.active.select(:id, :title, :author, :thumbnail, :context, :created_at, :status).order(created_at: :desc).take(3)
     end
 
     def self.admin_list(page = 1)

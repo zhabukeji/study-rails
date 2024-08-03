@@ -9,7 +9,7 @@
                     <div class="widget-body am-fr">
                         <%= form_with model: [:admin, @article], class: ["am-form", "tpl-form-line-form"] do |form| %>
                             <div class="am-form-group">
-                                <label for="user-name" class="am-u-sm-3 am-form-label">标题 <span class="tpl-form-line-small-title">Title</span></label>
+                                <label for="user-name" class="am-u-sm-3 am-form-label"><%= Article.human_attribute_name(:title) %> <span class="tpl-form-line-small-title">Title</span></label>
                                 <div class="am-u-sm-9 field_with_errors">
                                     <%= form.text_field :title, class:"tpl-form-input", placeholder: "请输入文章标题" %>
                                     
@@ -20,7 +20,7 @@
                                 </div>
                             </div>
                             <div class="am-form-group">
-                                <label for="user-name" class="am-u-sm-3 am-form-label">作者 <span class="tpl-form-line-small-title">Title</span></label>
+                                <label for="user-name" class="am-u-sm-3 am-form-label"><%= Article.human_attribute_name(:author) %> <span class="tpl-form-line-small-title">Title</span></label>
                                 <div class="am-u-sm-9 field_with_errors">
                                     <%= form.text_field :author, class:"tpl-form-input", placeholder: "请输入作者姓名" %>
                                     <% if @article.errors.where(:author).any? %>
@@ -43,7 +43,7 @@
                                 </div>
                             </div>                        
                             <div class="am-form-group">
-                                <label for="user-intro" class="am-u-sm-3 am-form-label">文章内容</label>
+                                <label for="user-intro" class="am-u-sm-3 am-form-label"><%= Article.human_attribute_name(:context) %></label>
                                 <div class="am-u-sm-9 field_with_errors">
                                     <%= form.text_area :context, placeholder: "请输入文章内容", rows: "10" %>
                                     <% if @article.errors.where(:context).any? %>

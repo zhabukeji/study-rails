@@ -7,7 +7,7 @@ zh-CN:
       article:
         title: "标题"
         author: "作者"
-        context: "内容"
+        context: "文章内容"
     errors:
       messages:
         record_invalid: 验证失败：%{errors}
@@ -188,4 +188,8 @@ zh-CN:
       long: "%Y年%m月%d日 %H:%M"
       short: "%m月%d日 %H:%M"
     pm: 下午
+  article:
+    status:
+      active: "显示"
+      non_check: "未审核"
     

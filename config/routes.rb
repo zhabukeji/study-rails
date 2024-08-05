@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   namespace :admin do
     root 'site#index'
     resources :articles
+    get 'login', to: 'logins#index'
   end
 end

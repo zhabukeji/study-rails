@@ -50,9 +50,8 @@
                         <label for="remember-me">
                         记住密码
                          </label>
-                         <small style="font-color: red"></small>
                     </div>
-                    <%= flash[:notice] %>
+                    <small style="color: red"> <%= flash.now[:notice] %> </small>
                     <div class="am-form-group">
                         <%= f.button "提交",class: "am-btn am-btn-primary  am-btn-block tpl-btn-bg-color-success  tpl-login-btn" %>
                     </div>

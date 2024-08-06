@@ -23,13 +23,13 @@
             <ul>
                 <!-- 欢迎语 -->
                 <li class="am-text-sm tpl-header-navbar-welcome">
-                    <a href="javascript:;">欢迎你, <span>Amaze UI</span> </a>
+                    <a href="javascript:;">欢迎你, <span> <%= current_user.email %> </span> </a>
                 </li>
                 <!-- 退出 -->
                 <li class="am-text-sm">
-                    <a href="javascript:;">
+                    <%= link_to admin_logout_path, data: { turbo_method: :delete } do %>
                         <span class="am-icon-sign-out"></span> 退出
-                    </a>
+                    <% end %>
                 </li>
             </ul>
         </div>

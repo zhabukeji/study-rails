@@ -12,9 +12,9 @@ class Admin::UsersController < Admin::ApplicationController
         @user = User.new(user_params)
         if @user.save
             flash[:notice] = '用户注册成功'
-            redirect_to admin_login_path
+            redirect_to admin_logup_path
         else
-            flash[:notice] = '用户注册失败'
+            flash.now[:notice] = '用户注册失败'
             render :new, locals: {user: @user }
         end
     end

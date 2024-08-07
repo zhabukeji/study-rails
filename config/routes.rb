@@ -7,11 +7,11 @@ Rails.application.routes.draw do
   namespace :admin do
     root 'site#index'
     resources :articles
-    get 'logup', to: 'users#new', as: :logup
-    post 'logup', to: 'users#create'
+    get 'login', to: 'users#new', as: :login
+    post 'login', to: 'users#create'
     resources :users, except: [:index, :new ,:create]
-    get 'login', to: 'user_sessions#new', as: :login
-    post 'login', to: "user_sessions#create"
+    get 'logup', to: 'user_sessions#new', as: :logup
+    post 'logup', to: "user_sessions#create"
     get 'logout', to: 'user_sessions#destroy', as: :logout
   end
 end

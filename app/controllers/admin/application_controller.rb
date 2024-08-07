@@ -4,6 +4,6 @@ class Admin::ApplicationController < ActionController::Base
 
   private
     def not_authenticated
-      redirect_to admin_login_path
+      redirect_to admin_logup_path
     end
 end

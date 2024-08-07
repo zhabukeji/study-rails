@@ -18,7 +18,7 @@ class Admin::UserSessionsController < Admin::ApplicationController
     end
     def destroy
         logout
-        redirect_to admin_login_path
+        redirect_to admin_logup_path
     end
 
     private

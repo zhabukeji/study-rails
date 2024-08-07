@@ -38,7 +38,7 @@
             <div class="tpl-login-content">
                 <div class="tpl-login-logo">
                 </div>
-                <%= form_with model: @user, url: admin_logup_path, class: "am-form tpl-form-line-form" do |f|  %>
+                <%= form_with model: @user, url: admin_login_path, class: "am-form tpl-form-line-form" do |f|  %>
                     <div class="am-form-group"> 
                         <%= f.text_field :email, class: "tpl-form-input", placeholder: "请输入邮箱" %>
                     </div>
@@ -48,7 +48,7 @@
                     <div class="am-form-group">
                         <%= f.password_field :password_confirmation, class: "tpl-form-input", placeholder: "确认密码" %>
                     </div>
-                    <small style="color: red"><%= flash[:notice] %></small>
+                    <small style="color: red"><%= flash.now[:notice] %></small>
                     <br>
                     <% if @user.errors.any? %>
                         <% @user.errors.each do |error| %>

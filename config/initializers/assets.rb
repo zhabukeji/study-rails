@@ -10,4 +10,9 @@ Rails.application.config.assets.version = "1.0"
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
+
+# 设置未找到assets 是否报错
+# Rails.application.config.assets.unknown_asset_fallback = true
+
+# 请求assets时的前缀
 # Rails.application.config.assets.prefix = "/a"
